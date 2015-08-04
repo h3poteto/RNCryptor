@@ -74,4 +74,6 @@
                HMACSalt:(NSData *)anHMACSalt
                   error:(NSError **)error;
 
++ (NSData *)encryptData:(NSData *)data password:(NSString *)password error:(NSError **)error;
+
 @end

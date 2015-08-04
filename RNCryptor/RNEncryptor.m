@@ -94,6 +94,13 @@
   return [self synchronousResultForCryptor:cryptor data:thePlaintext error:anError];
 }
 
++ (NSData *)encryptData:(NSData *)data
+               password:(NSString *)password
+                  error:(NSError **)error
+{
+  return [self encryptData:data withSettings:kRNCryptorAES256Settings password:password error:error];
+}
+
 - (RNEncryptor *)initWithSettings:(RNCryptorSettings)theSettings
                     encryptionKey:(NSData *)anEncryptionKey
                           HMACKey:(NSData *)anHMACKey
